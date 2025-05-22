@@ -15,6 +15,14 @@
       "request": "launch",
       "preLaunchTask": "npm: test",
       "url": "http://localhost:9876/debug.html"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Angular App",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "ng serve"
     }
   ]
 }

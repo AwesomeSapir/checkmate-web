@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  #rot-slider {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+  }
+  
+  image-cropper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 1rem;
+  }
+  
+  img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

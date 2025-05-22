@@ -1,0 +1,31 @@
+<input
+  type="file"
+  accept="image/*"
+  capture="environment"
+  (change)="fileChangeEvent($event)"
+/>
+
+<image-cropper
+  [imageChangedEvent]="imageChangedEvent"
+  [maintainAspectRatio]="false"
+  [transform]="transform"
+  format="png"
+  output="base64"
+  (imageCropped)="imageCropped($event)"
+></image-cropper>
+
+
+<input
+  id="rot-slider"
+  type="range"
+  min="-180"
+  max="180"
+  step="1"
+  [value]="transform.rotate"
+  (input)="onRotateSlider($any($event.target).value)"
+/>
+<label for="rot-slider">{{ transform.rotate }}°</label>
+
+<button id="submit-button" (click)="onSubmit()" [disabled]="!croppedImage">
+    Submit
+</button>
